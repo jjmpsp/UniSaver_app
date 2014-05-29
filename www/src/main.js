@@ -6,10 +6,10 @@ define(function(require, exports, module) {
 
 	var appView = new AppView();
 
-	var test = navigator.userAgent.toLowerCase();
-	if (test.indexOf("android") > -1) {
-		mainContext.setPerspective(100);
-	}
+	// var test = navigator.userAgent.toLowerCase();
+	// if (test.indexOf("android") > -1) {
+	// 	mainContext.setPerspective(100);
+	// }
 
 	mainContext.add(appView);
 });
