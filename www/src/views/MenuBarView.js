@@ -75,7 +75,7 @@ define(function(require, exports, module) {
         //title
         var titleSurf = new Surface({
             size: [140, 35],
-            content: 'THINGLIST',
+            content: 'UniSaver',
             properties: {
                 fontFamily: 'Arial Narrow',
                 fontSize: '24px',
@@ -125,6 +125,19 @@ define(function(require, exports, module) {
             if(this.filterViewSelected) { //display list view & filter-icon
                 this.filterViewSelected = false;
                 this.animateIcon();
+
+                cordova.plugins.barcodeScanner.scan(
+                    function (result) {
+                        var s = "Result: " + result.text + "<br/>" +
+                        "Format: " + result.format + "<br/>" +
+                        "Cancelled: " + result.cancelled;
+                        alert(s);
+                    }, 
+                    function (error) {
+                        alert("Scanning failed: " + error);
+                    }
+                );
+
             } else { //display filter view & x-icon
                 this.filterViewSelected = true;
                 this.animateIcon();

@@ -8,7 +8,7 @@ define(function(require, exports, module) {
 
 	var test = navigator.userAgent.toLowerCase();
 	if (test.indexOf("android") > -1) {
-		mainContext.setPerspective(1000);
+		mainContext.setPerspective(100);
 	}
 
 	mainContext.add(appView);
