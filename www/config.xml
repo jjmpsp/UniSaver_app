@@ -17,6 +17,9 @@
         Joel Murphy
     </author>
 
-    <!-- We'll include the Barcode plugin as an example -->
+    <!-- Barcode plugin -->
     <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+
+    <!-- Allow famo.us JS's -->
+    <access origin="http://code.famo.us" subdomains="true" />
 </widget>
